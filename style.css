@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(./images/background.jpg);
+    background-attachment: fixed;
+    background-position: center;
+}
+
+html{
+    font-size: 10px;
+    font-family:'Edu NSW ACT Foundation', cursive;
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p{
+    color: white;
+    text-align: left;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-top: 5px;
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+}
+
+/* Home */
+#home{
+    background-color: transparent;
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+#home::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+#home h1{
+    display: block;
+    width: fit-content;
+    font-size: 6rem;
+    font-family:'Rubik Iso', cursive;
+    position: relative;
+    color: #0b294e;
+    line-height: 0.70cm;
+    outline: none;
+    animation: animate 5s linear infinite;
+} 
+
+/* End Home */
+
+/* Weekly Updates */
+#weekly_updates .weekly_updates{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+    background-color: #040c20;
+    opacity: 0.8;
+}
+
+#weekly_updates .section_title{
+    font-size: 4rem;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
+
+#weekly_updates .weekly_updates_top p{
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 2rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300px;
+    letter-spacing: 0.05rem;
+    color: white;
+}
+
+#weekly_updates .weekly_updates_bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+#weekly_updates .week{
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 10px 5%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#weekly_updates .week::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    z-index: -1;
+}
+
+#weekly_updates .week h2{
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#weekly_updates .week p{
+    color: white;
+    text-align: left;
+    font-size: 2rem;
+    line-height: 1.9rem;
+}
+/* End Weekly Updates */
+
+/*Keyframes*/
+@keyframes animate{
+    0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92%{
+        color: #0b294e;
+        box-shadow: none;
+    }
+    18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100%{        
+        color: white;
+        text-shadow: 10px 10px 10px #6efeff,
+        20px 20px 20px #6efeff,
+        40px 40px 40px #6efeff,
+        80px 80px 80px #6efeff,
+        160px 160px 160px #6efeff,
+    }
+}
+/* End Keyframes*/
+
+/* Media query for Tablet */
+@media only screen and (min-width:760px){
+    h1.section_title {
+        font-size: 6rem;
+    }
+
+
+}
+/* End Media query for Tablet */
